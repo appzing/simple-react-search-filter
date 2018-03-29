@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import List from './List';
 
 class Search extends Component {
 	constructor(props) {
@@ -38,11 +39,7 @@ class Search extends Component {
 		return (
 			<div>
 				<input type="text" className="search-input" placeholder="Search" onChange={this.handleChange} />
-				<ul className="list-group">
-					{
-						items.map(item => <li className="list-group-item" key={item}>{item}</li>)
-					}
-				</ul>
+				<List items={items} />
 			</div>
 		)
 	}
